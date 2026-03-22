@@ -1,5 +1,5 @@
 [project]
-name = "sam3_masks"
+name = "Lichtfeld-SAM3-Plugin"
 version = "0.1.0"
 description = "SAM3 text-prompted mask extraction for LichtFeld Studio"
 authors = [{ name = "noaho" }]
