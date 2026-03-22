@@ -1,0 +1,31 @@
+[project]
+name = "sam3_masks"
+version = "0.1.0"
+description = "SAM3 text-prompted mask extraction for LichtFeld Studio"
+authors = [{ name = "noaho" }]
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "ultralytics>=8.3.237",
+    "clip @ git+https://github.com/ultralytics/CLIP.git",
+    "timm",
+    "huggingface-hub",
+    "scipy",
+    "packaging",
+]
+
+[tool.lichtfeld]
+hot_reload = true
+entry_point = "__init__"
+plugin_api = ">=1,<2"
+lichtfeld_version = ">=0.5.0"
+required_features = []
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+torchvision = { index = "pytorch-cu126" }
